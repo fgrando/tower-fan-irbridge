@@ -19,7 +19,7 @@ After that I could choose the `Raspberry Pi Pico/RP2040 by Earle F...` in the bo
 
 ## Step 1: Read the IR codes from the remote
 The `IRremote` library has an example called.
-Using the IR Rx sensor and the `ReceiverDemo` example from the `IRremote` library, I could extract all the IR codes from my remote control over the Serial.
+Using the IR Rx sensor and the [ReceiveDemo](ReceiveDemo/ReceiveDemo.ino) example from the `IRremote` library, I could extract all the IR codes from my remote control over the Serial.
 The commands (top to bottom, left to write) are the following:
 - swing
     - Protocol=PulseDistance Raw-Data=0xEC13 48 bits LSB first
@@ -78,7 +78,7 @@ The commands (top to bottom, left to write) are the following:
         ```
 
 ## Step 2: Transmit the IR codes read before
-There a example called 'Wifi example'. I modified it to add a request for each one of the commands. See the `rpi-server.ino`
+There a example called [Wifi example](rpi-server/rpi-server.ino). I modified it to add a request for each one of the commands. See the `rpi-server.ino`
 
 I used GPIO 16 to connect the IR transmiter data pin.
 
